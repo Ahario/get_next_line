@@ -6,7 +6,7 @@
 /*   By: hyeo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:54:15 by hyeo              #+#    #+#             */
-/*   Updated: 2021/11/22 16:08:48 by hyeo             ###   ########.fr       */
+/*   Updated: 2021/11/23 14:27:13 by hyeo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	target = (unsigned char)c;
 	if (!s)
-		return (0);
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		if (s[i] == target)
@@ -87,8 +87,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*temp;
 	unsigned int	i;
 	unsigned int	j;
-
-	i = 0;
+	
+	if (!s1)
+		i = 0;
+	else
+		i = ft_strlen(s1);
 	j = ft_strlen(s2);
 	temp = malloc(sizeof(char) * (i + j + 1));
 	if (temp == NULL)

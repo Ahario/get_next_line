@@ -6,13 +6,12 @@
 /*   By: hyeo <hyeo@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 15:16:38 by hyeo              #+#    #+#             */
-/*   Updated: 2021/11/22 15:41:06 by hyeo             ###   ########.fr       */
+/*   Updated: 2021/11/23 13:33:55 by hyeo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# define BUFFER_SIZE 1024
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -29,5 +28,10 @@ char			*ft_strchr(const char *s, int c);
 char			*ft_strjoin(char const *s1, char const *s2);
 unsigned int	ft_strlcat(char *dst, const char *src, unsigned int dstsize);
 unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int dstsize);
+
+#endif
+
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE
 
 #endif

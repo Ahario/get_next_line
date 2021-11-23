@@ -4,12 +4,32 @@
 int main()
 {
 	int	fd;
-	int i;
-	char	buff[BUFFER_SIZE];
-	char	temp[10000];
+	int i = 0;
+	char	*temp;
 	fd = open("./test.txt", O_RDONLY);
+	temp = get_next_line(fd);
 
-	printf("THIS IS YOUR ANSWER : %s", get_next_line(fd));
-  printf("THIS IS YOUR ANSWER : %s", get_next_line(fd));
-  printf("THIS IS YOUR ANSWER : %s", get_next_line(fd));
+	while(temp != NULL)
+	{
+		printf("%s", temp);
+		temp = get_next_line(fd);
+		i++;
+	}
+	printf("%d\n", i);
+//	get_next_line(fd);
+//	printf("--------------------------------------\n");
+//	get_next_line(fd);
+//	printf("--------------------------------------\n");
+//	get_next_line(fd);
+//	printf("--------------------------------------\n");
+//	get_next_line(fd);
+//	printf("--------------------------------------\n");
+//	get_next_line(fd);
+//	printf("--------------------------------------\n");
+//	get_next_line(fd);
+//	printf("--------------------------------------\n");
+//	get_next_line(fd);
+//	printf("--------------------------------------\n");
+//	get_next_line(fd);
+//	printf("--------------------------------------\n");
 }
